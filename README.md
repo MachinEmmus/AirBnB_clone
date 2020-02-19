@@ -18,7 +18,7 @@
 ---
 In order to run the shell command interpreter, you must install it in your repository by cloning the following (shown below) in your machine running:
     ```
-    git clone https://github.com/shincap8/simple_shell.git
+    git clone https://github.com/Doouh/AirBnB_clone.git
     ```
 
 ### Interactive Mode:
