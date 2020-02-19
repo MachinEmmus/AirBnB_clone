@@ -1,6 +1,6 @@
 ![](https://camo.githubusercontent.com/9ebbf60e208b031d4dcf7db6ffc19fe0339d0ff3/68747470733a2f2f692e6962622e636f2f64354e38354e682f68626e622e706e67)
 <h1 align ="center"> AIR BNB CLONE </h1><br>
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
 ## What is the Objective?
 * ##### THE CONSOLE
     create your data model
@@ -20,6 +20,7 @@ In order to run the shell command interpreter, you must install it in your repos
     ```
     git clone https://github.com/shincap8/simple_shell.git
     ```
+
 ### Interactive Mode:
 ```sh
 $ ./console.py
@@ -27,25 +28,52 @@ $ ./console.py
 
 Documented commands (type help <topic>):
 ========================================
-EOF  help  quit
-
-(hbnb) 
+EOF  help  quit create update show all destroy
+(hbnb) all
+[]
+(hbnb) create User
+2015c9b2-d17e-41ab-8355-2bb256eac544
+(hbnb) show User 2015c9b2-d17e-41ab-8355-2bb256eac544
+[User] (2015c9b2-d17e-41ab-8355-2bb256eac544) {'id': '2015c9b2-d17e-41ab-8355-2bb256eac544', 'created_at': datetime.datetime(2020, 2, 19, 17, 7, 37, 854963), 'updated_at': datetime.datetime(2020, 2, 19, 17, 7, 37, 854989)}
+(hbnb) create Place
+dc886eec-fe3a-4c06-b161-f90a4d78e0a1
+(hbnb) create BaseModel
+ba9c5086-de53-4832-a180-7e51cb201e66
+(hbnb) all
+["[User] (2015c9b2-d17e-41ab-8355-2bb256eac544) {'id': '2015c9b2-d17e-41ab-8355-2bb256eac544', 'created_at': datetime.datetime(2020, 2, 19, 17, 7, 37, 854963), 'updated_at': datetime.datetime(2020, 2, 19, 17, 7, 37, 854989)}", "[Place] (dc886eec-fe3a-4c06-b161-f90a4d78e0a1) {'id': 'dc886eec-fe3a-4c06-b161-f90a4d78e0a1', 'created_at': datetime.datetime(2020, 2, 19, 17, 8, 35, 120768), 'updated_at': datetime.datetime(2020, 2, 19, 17, 8, 35, 120793)}", "[BaseModel] (ba9c5086-de53-4832-a180-7e51cb201e66) {'id': 'ba9c5086-de53-4832-a180-7e51cb201e66', 'created_at': datetime.datetime(2020, 2, 19, 17, 8, 40, 859003), 'updated_at': datetime.datetime(2020, 2, 19, 17, 8, 40, 859027)}"]
+(hbnb) show Place dc886eec-fe3a-4c06-b161-f90a4d78e0a1
+[Place] (dc886eec-fe3a-4c06-b161-f90a4d78e0a1) {'id': 'dc886eec-fe3a-4c06-b161-f90a4d78e0a1', 'created_at': datetime.datetime(2020, 2, 19, 17, 8, 35, 120768), 'updated_at': datetime.datetime(2020, 2, 19, 17, 8, 35, 120793)}
+(hbnb) destroy BaseModel ba9c5086-de53-4832-a180-7e51cb201e66
+(hbnb) all
+["[User] (2015c9b2-d17e-41ab-8355-2bb256eac544) {'id': '2015c9b2-d17e-41ab-8355-2bb256eac544', 'created_at': datetime.datetime(2020, 2, 19, 17, 7, 37, 854963), 'updated_at': datetime.datetime(2020, 2, 19, 17, 7, 37, 854989)}", "[Place] (dc886eec-fe3a-4c06-b161-f90a4d78e0a1) {'id': 'dc886eec-fe3a-4c06-b161-f90a4d78e0a1', 'created_at': datetime.datetime(2020, 2, 19, 17, 8, 35, 120768), 'updated_at': datetime.datetime(2020, 2, 19, 17, 8, 35, 120793)}"]
+(hbnb) destroy User 2015c9b2-d17e-41ab-8355-2bb256eac544
+(hbnb) update Place dc886eec-fe3a-4c06-b161-f90a4d78e0a1 City "Medellin"
+(hbnb) all Place
+["[Place] (dc886eec-fe3a-4c06-b161-f90a4d78e0a1) {'id': 'dc886eec-fe3a-4c06-b161-f90a4d78e0a1', 'created_at': datetime.datetime(2020, 2, 19, 17, 8, 35, 120768), 'updated_at': datetime.datetime(2020, 2, 19, 17, 8, 35, 120793), 'City': 'Medellin'}"]
 (hbnb) 
 (hbnb) quit
 $
 ```
 ### Non-Interactive Mode:
 ```sh
-$ ./console.py
-(hbnb) help
+$ echo "help" | ./console.py
+(hbnb)
 
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
+(hbnb) 
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
 
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
 (hbnb) 
-(hbnb) 
-(hbnb) quit
 $
 ```
 ---
