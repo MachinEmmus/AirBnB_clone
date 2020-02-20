@@ -78,18 +78,29 @@ $
 ```
 ---
 - To read the manual you man run:
-```man ./[FILE]``` taking into account the structure, for our case it would be ```man ./man_1_simple_shell```
+```help [command]``` You can see read a little description about the command
 
 | File Name | Description and contents |
 | --- | --- |
-| [models](models) | This is the manpage for the shell command, this will help us know how to use the shell and the many uses of it, in here we can find examples and the correct sintaxis of the commands.|
-| [tests](tests) |This is the headers file where we can find all the prototypes of our functions and the structures used.|
-| [console](console.py) |In here we have the puts and putchar function it is used to print characters.|
-| [Authors](AUTHORS) |In here we have the atoi function it is used to make integers into characters, the alloc funcction to allocate memory and the freeall function to free the memory allocated when it is not needed anymore.|
+| [models](models) | In this folder you can find all the classes that we implemented in the project, how the objects we created were modeled and what methods and attributes we have declared and implemented.|
+|[base_model](models/base_model.py)|Create the principla class from which they will inherit all the classes|
+|[amenity](models/amenity.py)|class to the amenities|
+|[city](models/city.py)|class to the cities|
+|[user](models/user.py)|class to create users|
+|[place](models/place.py)|class to the places|
+|[review](models/review.py)|class to the review|
+|[state](models/state.py)|class to the states|
+|[_ _init_ _](models/__init__.py)|Init to convert the folder to module with instance the FileStorage class|
+|[engine](models/engine)|Folder that containing the class FileStorage|
+|[file_storage](models/engine/file_storage.py)|Es la clase donde manipulamos la informacion en formato json|
+| [tests](tests) |Here are all the tests we used to test the functionalities of our project to see how the console behaved in different situations and as such our classes |
+| [console](console.py) |It is the way we implement to communicate with our classes to create instances and objects from the methods we have that correspond to a "CRUD"|
+| [Authors](AUTHORS) |Document with brief information about the people who took part in the project|
 #### In the future we will go to imporved this project thanks for look
 #### Tecnology with we work 🛠️:
 * [python3.4](https://docs.python.org/3.4/)
 * [bash](https://www.gnu.org/software/bash/)
+* [vim](https://www.vim.org/)
 
 ## ⌨️  with ❤️  By :
 * **Kevin Giraldo**
